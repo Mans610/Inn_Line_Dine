@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:inn_dine_hub/Screens/viewHotel.dart';
+import 'package:inn_dine_hub/Screens/Hotel/viewHotel.dart';
 import 'package:inn_dine_hub/main.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../Helper/model.dart';
-import 'addHotel.dart';
-import 'editMenuItem.dart';
+import 'Hotel/addHotel.dart';
+import 'Hotel/editHotel.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

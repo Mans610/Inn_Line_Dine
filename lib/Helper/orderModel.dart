@@ -1,4 +1,4 @@
-import '../Screens/takeOrder.dart';
+import '../Screens/Table/takeOrder.dart';
 import 'model.dart';
 String getOrderKey(int tableNumber, String hotelName) {
   return 'currentOrder-$hotelName-$tableNumber';

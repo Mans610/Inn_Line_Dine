@@ -7,7 +7,7 @@ void main() {
 String appName = 'InnDineHub';
 Color pColor =  const Color(0xffF2D99F);
 Color sColor =  const Color(0xff137276);
-Color s1Color =   Colors.cyan;
+Color s1Color = Colors.cyan;
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

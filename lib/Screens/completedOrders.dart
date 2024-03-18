@@ -8,7 +8,7 @@ import '../Helper/orderModel.dart';
 
 class CompletedOrdersScreen extends StatefulWidget {
   final Hotel hotel;
-  CompletedOrdersScreen({Key? key, required this.hotel}) : super(key: key);
+  const CompletedOrdersScreen({Key? key, required this.hotel}) : super(key: key);
 
   @override
   _CompletedOrdersScreenState createState() => _CompletedOrdersScreenState();
