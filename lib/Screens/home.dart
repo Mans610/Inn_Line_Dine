@@ -69,61 +69,71 @@ class _HomeScreenState extends State<HomeScreen> {
               fontWeight: FontWeight.bold,
             )),
       ),
-
       body: Column(
         children: [
-          SizedBox(height: 50),
-          ListView.builder(
-            itemCount: hotels.length,
-            shrinkWrap: true,
-            itemBuilder: (context, index) {
-              return Card(
-                elevation: 3,
-                margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                child: ListTile(
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 8),
-                  title: Text(hotels[index].name),
-                  subtitle: Text(
-                      "Total Table : ${hotels[index].totalTables} | Total Menu Item: ${hotels[index].menu.length}",
-                      style: const TextStyle(fontSize: 10)),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            HotelDetailScreen(hotel: hotels[index]),
+          const SizedBox(height: 50),
+          hotels.length == 0
+              ? const Expanded(
+                  child: Center(
+                      child: Text(
+                  'Hotel Not Available Yet!\n',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                )))
+              : ListView.builder(
+                  itemCount: hotels.length,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) {
+                    return Card(
+                      elevation: 3,
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 5),
+                      child: ListTile(
+                        contentPadding:
+                            const EdgeInsets.symmetric(horizontal: 8),
+                        title: Text(hotels[index].name),
+                        subtitle: Text(
+                            "Total Table : ${hotels[index].totalTables} | Total Menu Item: ${hotels[index].menu.length}",
+                            style: const TextStyle(fontSize: 10)),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  HotelDetailScreen(hotel: hotels[index]),
+                            ),
+                          );
+                        },
+                        leading: customIcon(Icons.restaurant_rounded, () {
+                          //deleteHotel(index);
+                        }),
+                        trailing: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            customIcon(Icons.edit, () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => EditHotelScreen(
+                                    hotel: hotels[index],
+                                    onUpdate: loadHotels,
+                                  ),
+                                ),
+                              );
+                            }),
+                            const SizedBox(
+                              width: 5,
+                            ),
+                            customIcon(Icons.delete, () {
+                              deleteHotel(index);
+                            }),
+                          ],
+                        ),
                       ),
                     );
                   },
-                  leading:  customIcon(Icons.restaurant_rounded, () {
-                    //deleteHotel(index);
-                  }),
-                  trailing: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      customIcon(Icons.edit, () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => EditHotelScreen(
-                              hotel: hotels[index],
-                              onUpdate: loadHotels,
-                            ),
-                          ),
-                        );
-                      }),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      customIcon(Icons.delete, () {
-                        deleteHotel(index);
-                      }),
-                    ],
-                  ),
                 ),
-              );
-            },
-          ),
         ],
       ),
       bottomNavigationBar: Container(
@@ -144,16 +154,21 @@ class _HomeScreenState extends State<HomeScreen> {
               );
             },
             child: Card(
-             elevation: 8,
+              elevation: 8,
               color: pColor,
-              child: Row(mainAxisAlignment: MainAxisAlignment.center,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Add New Hotel',style: TextStyle(fontSize: 22,fontWeight: FontWeight.w600,color: Colors.black)),
+                  Text('Add New Hotel',
+                      style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black)),
                 ],
               ),
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),side: const BorderSide(width: 0.2)
-              ),
+                  borderRadius: BorderRadius.circular(8),
+                  side: const BorderSide(width: 0.2)),
             ),
           ),
         ),
@@ -168,12 +183,12 @@ Widget customIcon(IconData icon, Function onTap) {
     child: SizedBox(
       height: 45,
       width: 45,
-
       child: Card(
-        color: Colors.white,elevation: 8,
+        color: Colors.white,
+        elevation: 8,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),side: const BorderSide(width: 0.2)
-        ),
+            borderRadius: BorderRadius.circular(8),
+            side: const BorderSide(width: 0.2)),
         child: Center(
             child: Icon(
           icon,

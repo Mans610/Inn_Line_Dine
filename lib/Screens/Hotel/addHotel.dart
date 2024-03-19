@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../Comman/Util.dart';
 import '../../Helper/model.dart';
 import '../../main.dart';
 
@@ -39,9 +40,16 @@ class _AddHotelScreenState extends State<AddHotelScreen> {
   void addHotel() {
     String name = _nameController.text;
     int totalTables = int.tryParse(_tablesController.text) ?? 0;
-    Hotel hotel = Hotel(name: name, totalTables: totalTables, menu: menu);
-    widget.onAddHotel(hotel);
-    Navigator.pop(context);
+    if(name.isEmpty){
+      showSnackBar(context,'Hotel Name Is Required');
+    }else if(totalTables == 0){
+      showSnackBar(context,"Table can't be 0 or Empty");
+    }else {
+      Hotel hotel = Hotel(name: name, totalTables: totalTables, menu: menu);
+      widget.onAddHotel(hotel);
+      Navigator.pop(context);
+    }
+
   }
 
   @override
