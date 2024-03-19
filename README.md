@@ -7,12 +7,30 @@
 ## Description
 
 InnDineHub is a Flutter app designed to help hotel owners manage their table booking and order taking processes efficiently. Hotel owners can add multiple hotels to the app, each with its own set of tables and menu items. The app provides CRUD functionality for managing hotels, tables, and menu items.
-
-![App Screenshot 1](https://firebasestorage.googleapis.com/v0/b/vaultifylink.appspot.com/o/uploads%2FQKQ1.190910.002%2F1710868656078_IMG-20240319-WA0002.jpg?alt=media&token=353bf529-b7a8-4b47-b7b0-8dc9ef8a4587)
-![App Screenshot 2](https://firebasestorage.googleapis.com/v0/b/vaultifylink.appspot.com/o/uploads%2FQKQ1.190910.002%2F1710868676880_IMG-20240319-WA0003.jpg?alt=media&token=62049c10-e1f1-421c-bf24-89ddafd37056)
-![App Screenshot 3](https://firebasestorage.googleapis.com/v0/b/vaultifylink.appspot.com/o/uploads%2FQKQ1.190910.002%2F1710868693126_IMG-20240319-WA0004.jpg?alt=media&token=1e475279-7db6-4f9b-a0f9-5a8dd8c007a7)
-![App Screenshot 4](https://firebasestorage.googleapis.com/v0/b/vaultifylink.appspot.com/o/uploads%2FQKQ1.190910.002%2F1710868697475_IMG-20240319-WA0005.jpg?alt=media&token=a1ffdac1-815f-4859-94c6-d2c65906d5ee)
-![App Screenshot 4](https://firebasestorage.googleapis.com/v0/b/vaultifylink.appspot.com/o/uploads%2FQKQ1.190910.002%2F1710868702391_IMG-20240319-WA0006.jpg?alt=media&token=eb826b44-6814-4ec3-a9d8-3472d435d52a)
+<table style="border-collapse: collapse;">
+  <tr>
+    <td align="center" style="padding: 10px; border: 1px dotted black;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/vaultifylink.appspot.com/o/uploads%2FQKQ1.190910.002%2F1710868656078_IMG-20240319-WA0002.jpg?alt=media&token=353bf529-b7a8-4b47-b7b0-8dc9ef8a4587" alt="App Screenshot 1" style="width: 200px; height: 400px;">
+    </td>
+    <td align="center" style="padding: 10px; border: 1px dotted black;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/vaultifylink.appspot.com/o/uploads%2FQKQ1.190910.002%2F1710868676880_IMG-20240319-WA0003.jpg?alt=media&token=62049c10-e1f1-421c-bf24-89ddafd37056" alt="App Screenshot 2" style="width: 200px; height: 400px;">
+    </td>
+    <td align="center" style="padding: 10px; border: 1px dotted black;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/vaultifylink.appspot.com/o/uploads%2FQKQ1.190910.002%2F1710868693126_IMG-20240319-WA0004.jpg?alt=media&token=1e475279-7db6-4f9b-a0f9-5a8dd8c007a7" alt="App Screenshot 3" style="width: 200px; height: 400px;">
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="padding: 10px; border: 1px dotted black;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/vaultifylink.appspot.com/o/uploads%2FQKQ1.190910.002%2F1710868697475_IMG-20240319-WA0005.jpg?alt=media&token=a1ffdac1-815f-4859-94c6-d2c65906d5ee" alt="App Screenshot 4" style="width: 200px; height: 400px;">
+    </td>
+    <td align="center" style="padding: 10px; border: 1px dotted black;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/vaultifylink.appspot.com/o/uploads%2FQKQ1.190910.002%2F1710868702391_IMG-20240319-WA0006.jpg?alt=media&token=eb826b44-6814-4ec3-a9d8-3472d435d52a" alt="App Screenshot 5" style="width: 200px; height: 400px;">
+    </td>
+    <td align="center" style="padding: 10px; border: 1px dotted black;">
+      <img src="https://firebasestorage.googleapis.com/v0/b/vaultifylink.appspot.com/o/uploads%2FQKQ1.190910.002%2F1710868700176_IMG-20240319-WA0007.jpg?alt=media&token=323595f3-4f70-4c45-8dd4-43a05cf76a34" alt="App Screenshot 6" style="width: 200px; height: 400px;">
+    </td>
+  </tr>
+</table>
 
 
 ## Features
